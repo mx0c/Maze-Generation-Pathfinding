@@ -6,9 +6,9 @@
 
 MazeGenerator::MazeGenerator(int matrixSize, int windowWidth, int windowHeight, SDL_Renderer* renderer) {
     //alloc 2D Array
-    this->matrix = new Rect*[matrixSize];
+    this->matrix = new Cell*[matrixSize];
     for(int i = 0; i < matrixSize; ++i) {
-        this->matrix[i] = new Rect[matrixSize];
+        this->matrix[i] = new Cell[matrixSize];
     }
 
     //init 2D Array
@@ -18,7 +18,7 @@ MazeGenerator::MazeGenerator(int matrixSize, int windowWidth, int windowHeight, 
             int hScale = windowHeight/matrixSize;
             int xPos = x*wScale;
             int yPos = y*hScale;
-            this->matrix[x][y].setRect(xPos, yPos, wScale-1, hScale-1, renderer);
+            this->matrix[x][y].setCell(xPos, yPos, hScale, renderer);
         }
     }
 
@@ -34,7 +34,7 @@ void MazeGenerator::GenerateMaze(){
 void MazeGenerator::DrawMaze(SDL_Color color){
     for(int x = 0; x < this->MatrixSize; x++) {
         for (int y = 0; y < this->MatrixSize; y++) {
-            this->matrix[x][y].drawRect(color);
+            this->matrix[x][y].drawCell(color);
         }
     }
 }

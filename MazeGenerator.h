@@ -4,12 +4,12 @@
 
 #ifndef MAZESOLVER_MAZEGENERATOR_H
 #define MAZESOLVER_MAZEGENERATOR_H
-#include "Rect.h"
+#include "Cell.h"
 #include <array>
 
 class MazeGenerator{
 public:
-        Rect** matrix;
+        Cell** matrix;
         int MatrixSize;
         int windowWidth;
         int windowHeight;

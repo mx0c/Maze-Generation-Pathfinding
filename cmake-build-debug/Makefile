@@ -47,10 +47,10 @@ RM = "D:\CLion 2017\bin\cmake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Marius\Desktop\MazeSolver
+CMAKE_SOURCE_DIR = C:\Users\Marius\Desktop\Maze-Generation-Pathfinding
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Marius\Desktop\MazeSolver\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Marius\Desktop\Maze-Generation-Pathfinding\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Marius\Desktop\MazeSolver\cmake-build-debug\CMakeFiles C:\Users\Marius\Desktop\MazeSolver\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Marius\Desktop\Maze-Generation-Pathfinding\cmake-build-debug\CMakeFiles C:\Users\Marius\Desktop\Maze-Generation-Pathfinding\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Marius\Desktop\MazeSolver\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Marius\Desktop\Maze-Generation-Pathfinding\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ MazeSolver/fast:
 	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/build
 .PHONY : MazeSolver/fast
 
+Cell.obj: Cell.cpp.obj
+
+.PHONY : Cell.obj
+
+# target to build an object file
+Cell.cpp.obj:
+	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/Cell.cpp.obj
+.PHONY : Cell.cpp.obj
+
+Cell.i: Cell.cpp.i
+
+.PHONY : Cell.i
+
+# target to preprocess a source file
+Cell.cpp.i:
+	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/Cell.cpp.i
+.PHONY : Cell.cpp.i
+
+Cell.s: Cell.cpp.s
+
+.PHONY : Cell.s
+
+# target to generate assembly for a file
+Cell.cpp.s:
+	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/Cell.cpp.s
+.PHONY : Cell.cpp.s
+
 MazeGenerator.obj: MazeGenerator.cpp.obj
 
 .PHONY : MazeGenerator.obj
@@ -148,33 +175,6 @@ MazeGenerator.s: MazeGenerator.cpp.s
 MazeGenerator.cpp.s:
 	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/MazeGenerator.cpp.s
 .PHONY : MazeGenerator.cpp.s
-
-Rect.obj: Rect.cpp.obj
-
-.PHONY : Rect.obj
-
-# target to build an object file
-Rect.cpp.obj:
-	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/Rect.cpp.obj
-.PHONY : Rect.cpp.obj
-
-Rect.i: Rect.cpp.i
-
-.PHONY : Rect.i
-
-# target to preprocess a source file
-Rect.cpp.i:
-	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/Rect.cpp.i
-.PHONY : Rect.cpp.i
-
-Rect.s: Rect.cpp.s
-
-.PHONY : Rect.s
-
-# target to generate assembly for a file
-Rect.cpp.s:
-	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/Rect.cpp.s
-.PHONY : Rect.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -212,12 +212,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... MazeSolver
 	@echo ... edit_cache
+	@echo ... Cell.obj
+	@echo ... Cell.i
+	@echo ... Cell.s
 	@echo ... MazeGenerator.obj
 	@echo ... MazeGenerator.i
 	@echo ... MazeGenerator.s
-	@echo ... Rect.obj
-	@echo ... Rect.i
-	@echo ... Rect.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

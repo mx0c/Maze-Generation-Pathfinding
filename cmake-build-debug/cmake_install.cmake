@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Marius/Desktop/MazeSolver
+# Install script for directory: C:/Users/Marius/Desktop/Maze-Generation-Pathfinding
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SDL_Demo")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/MazeSolver")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Marius/Desktop/MazeSolver/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

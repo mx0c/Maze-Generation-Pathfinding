@@ -31,7 +31,7 @@ int main (int argc, char** argv)
     SDL_RenderClear( renderer );
 
     // Gen Maze + Draw
-    MazeGenerator* generator = new MazeGenerator(50, WIN_WIDTH, WIN_HEIGHT, renderer);
+    MazeGenerator* generator = new MazeGenerator(25, WIN_WIDTH, WIN_HEIGHT, renderer);
     generator->DrawMaze({255,255,255,0});
 
     //gameLoop

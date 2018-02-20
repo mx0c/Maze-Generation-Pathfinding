@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MazeSolver.dir/main.cpp.obj"
-  "CMakeFiles/MazeSolver.dir/Rect.cpp.obj"
+  "CMakeFiles/MazeSolver.dir/Cell.cpp.obj"
   "CMakeFiles/MazeSolver.dir/MazeGenerator.cpp.obj"
   "MazeSolver.pdb"
   "MazeSolver.exe"
