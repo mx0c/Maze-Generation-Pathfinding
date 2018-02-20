@@ -1,0 +1,4 @@
+"D:\CLion 2017\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Marius\Desktop\MazeSolver
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Marius/Desktop/MazeSolver/cmake-build-debug

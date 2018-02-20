@@ -1,2 +1,2 @@
 # Maze-Generation-Pathfinding
-Maze Generation and Pathfinding in C++ with SDL2
+Maze Generation and Pathfinding Algorithm in C++ with SDL2
