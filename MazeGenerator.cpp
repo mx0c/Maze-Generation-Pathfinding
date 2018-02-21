@@ -116,20 +116,20 @@ void MazeGenerator::removeWalls(Cell* a, Cell* b) {
 
     //remove x walls
     if(deltaX == 1){
-        a->walls["left"] = false;
-        b->walls["right"] = false;
+        a->setWalls("left",false);
+        b->setWalls("right",false);
     }else if(deltaX == -1){
-        a->walls["right"] = false;
-        b->walls["left"] = false;
+        a->setWalls("right",false);
+        b->setWalls("left",false);
     }
 
     //remove y walls
     if(deltaY == 1){
-        a->walls["top"] = false;
-        b->walls["bottom"] = false;
+        a->setWalls("top",false);
+        b->setWalls("bottom",false);
     }else if(deltaY == -1){
-        a->walls["bottom"] = false;
-        b->walls["top"] = false;
+        a->setWalls("bottom",false);
+        b->setWalls("top",false);
     }
 }
 
@@ -144,12 +144,12 @@ void MazeGenerator::pickRandomStartEnd(){
 
 void MazeGenerator::highlightCell(SDL_Color clr, Cell* cell){
     SDL_Rect r;
-    r.x = cell->x;
-    r.y = cell->y;
-    r.w = cell->scale;
-    r.h = cell->scale;
+    r.x = cell->getX();
+    r.y = cell->getY();
+    r.w = cell->getScale();
+    r.h = cell->getScale();
 
-    // Set render color to blue ( rect will be rendered in this color )
+    // Set render color
     SDL_SetRenderDrawColor( renderer, clr.r, clr.g, clr.b, clr.a);
 
     // Render rect

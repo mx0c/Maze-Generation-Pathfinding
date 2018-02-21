@@ -12,20 +12,24 @@
 using namespace std;
 
 class Cell{
-    public:
+    private:
         map<string,bool> walls;
         int x;
         int y;
         int scale;
         bool visited;
         SDL_Renderer* renderer;
-
+    public:
         Cell();
         void drawCell(SDL_Color color);
-        void setCell(int x, int y, int scale, SDL_Renderer* renderer);
-        void setVisited(bool visited);
         tuple<int, int> getIndex();
         bool getVisited();
+        int getX();
+        int getY();
+        int getScale();
+        void setCell(int x, int y, int scale, SDL_Renderer* renderer);
+        void setWalls(string wall, bool value);
+        void setVisited(bool visited);
 };
 
 #endif //SDL_DEMO_RECT_H

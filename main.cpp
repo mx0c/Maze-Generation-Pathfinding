@@ -3,8 +3,8 @@
 #include "include/SDL2/SDL.h"
 #include "MazeGenerator.h"
 
-#define WIN_HEIGHT 800
-#define WIN_WIDTH 800
+#define WIN_HEIGHT 1000
+#define WIN_WIDTH 1000
 
 using namespace std;
 

@@ -14,15 +14,12 @@
     <list default="true" id="d71dea03-7e70-409f-bada-6936ab46ba0a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Cell.cpp" afterPath="$PROJECT_DIR$/Cell.cpp" />
+      <change beforePath="$PROJECT_DIR$/Cell.h" afterPath="$PROJECT_DIR$/Cell.h" />
       <change beforePath="$PROJECT_DIR$/MazeGenerator.cpp" afterPath="$PROJECT_DIR$/MazeGenerator.cpp" />
       <change beforePath="$PROJECT_DIR$/MazeGenerator.h" afterPath="$PROJECT_DIR$/MazeGenerator.h" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/CXX.includecache" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/Cell.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/Cell.cpp.obj" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/MazeGenerator.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/MazeGenerator.cpp.obj" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/main.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/main.cpp.obj" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/objects.a" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeSolver.dir/objects.a" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/MazeSolver.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/MazeSolver.exe" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SDL_Demo.exe" afterPath="" />
       <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="SDL_Demo.iws" />
@@ -43,7 +40,7 @@
     <favorites_list name="SDL_Demo" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3923025">
+    <splitter split-orientation="horizontal" split-proportion="0.40378124">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
@@ -56,11 +53,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="638">
-                  <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                <state relative-caret-position="44">
+                  <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -69,11 +66,21 @@
           <file leaf-file-name="Cell.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Cell.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="38" />
+                <state relative-caret-position="462">
+                  <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
                   <folding>
                     <element signature="e#92#121#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Cell.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Cell.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="727">
+                  <caret line="70" column="23" lean-forward="false" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -82,11 +89,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Cell.h" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Cell.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Cell.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+                <state relative-caret-position="153">
+                  <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="10" />
                   <folding>
                     <element signature="e#92#121#0" expanded="true" />
                   </folding>
@@ -94,11 +101,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MazeGenerator.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MazeGenerator.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MazeGenerator.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                <state relative-caret-position="859">
+                  <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
                   <folding>
                     <element signature="e#42#68#0" expanded="true" />
                   </folding>
@@ -109,10 +116,10 @@
           <file leaf-file-name="MazeGenerator.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MazeGenerator.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="359">
-                  <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+                <state relative-caret-position="117">
+                  <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding>
-                    <element signature="e#113#130#0" expanded="true" />
+                    <element signature="e#114#131#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -140,11 +147,11 @@
         <option value="$PROJECT_DIR$/Rect.cpp" />
         <option value="$PROJECT_DIR$/Wall.h" />
         <option value="$PROJECT_DIR$/Wall.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Cell.h" />
         <option value="$PROJECT_DIR$/Cell.cpp" />
-        <option value="$PROJECT_DIR$/MazeGenerator.h" />
         <option value="$PROJECT_DIR$/MazeGenerator.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/MazeGenerator.h" />
       </list>
     </option>
   </component>
@@ -245,14 +252,17 @@
       <workItem from="1519131533716" duration="10574000" />
       <workItem from="1519212290498" duration="7266000" />
       <workItem from="1519231748094" duration="1552000" />
+      <workItem from="1519233504830" duration="321000" />
+      <workItem from="1519252985172" duration="1062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29859000" />
+    <option name="totallyTimeSpent" value="31242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21970496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -260,7 +270,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -323,12 +333,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#92#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MazeGenerator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#114#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MazeGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MazeGenerator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
           <folding>
-            <element signature="e#113#130#0" expanded="true" />
+            <element signature="e#114#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -382,7 +438,7 @@
         <state relative-caret-position="462">
           <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="33" />
           <folding>
-            <element signature="e#113#130#0" expanded="true" />
+            <element signature="e#114#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -428,7 +484,7 @@
         <state relative-caret-position="374">
           <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
-            <element signature="e#113#130#0" expanded="true" />
+            <element signature="e#114#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,7 +536,7 @@
         <state relative-caret-position="242">
           <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
-            <element signature="e#113#130#0" expanded="true" />
+            <element signature="e#114#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -534,7 +590,7 @@
         <state relative-caret-position="242">
           <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
-            <element signature="e#113#130#0" expanded="true" />
+            <element signature="e#114#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -658,48 +714,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cell.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        <state relative-caret-position="44">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cell.h">
+    <entry file="file://$PROJECT_DIR$/Cell.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#92#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MazeGenerator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="e#113#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="727">
+          <caret line="70" column="23" lean-forward="false" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MazeGenerator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="859">
+          <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
           <folding>
             <element signature="e#42#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MazeGenerator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#114#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="10" />
+          <folding>
+            <element signature="e#92#121#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -54,3 +54,19 @@ std::tuple<int, int> Cell::getIndex(){
 bool Cell::getVisited(){
     return this->visited;
 }
+
+void Cell::setWalls(string wall, bool value) {
+    this->walls[wall] = value;
+}
+
+int Cell::getX(){
+    return this->x;
+}
+
+int Cell::getY(){
+    return this->y;
+}
+
+int Cell::getScale(){
+    return this->scale;
+}
