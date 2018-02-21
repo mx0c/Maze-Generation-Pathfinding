@@ -3,12 +3,14 @@
 //
 
 #include "Cell.h"
+#include <tuple>
 
 Cell::Cell(){
     this->walls["right"] = true;
     this->walls["left"] = true;
     this->walls["top"] = true;
     this->walls["bottom"] = true;
+    this->visited = false;
 }
 
 void Cell::drawCell(SDL_Color color) {
@@ -37,4 +39,18 @@ void Cell::setCell(int x, int y, int scale, SDL_Renderer *renderer) {
     this->y = y;
     this->scale = scale;
     this->renderer = renderer;
+}
+
+void Cell::setVisited(bool visited){
+    this->visited = visited;
+}
+
+std::tuple<int, int> Cell::getIndex(){
+    int x = this->x / this->scale;
+    int y = this->y / this->scale;
+    return std::make_tuple(x, y);
+}
+
+bool Cell::getVisited(){
+    return this->visited;
 }

@@ -6,15 +6,19 @@
 #define MAZESOLVER_MAZEGENERATOR_H
 #include "Cell.h"
 #include <array>
+#include <stack>
 
 class MazeGenerator{
 public:
         Cell** matrix;
         int MatrixSize;
-        int windowWidth;
-        int windowHeight;
+        Cell* currentCell;
+        std::stack<Cell*> CellStack;
+        SDL_Renderer* renderer;
         MazeGenerator(int matrixSize, int windowWidth, int windowHeight, SDL_Renderer* renderer);
         void GenerateMaze();
         void DrawMaze(SDL_Color color);
+        Cell* getCellNeighbour();
+        void removeWalls(Cell* current, Cell* next);
 };
 #endif //MAZESOLVER_MAZEGENERATOR_H

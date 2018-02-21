@@ -9,6 +9,8 @@
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/Cell.cpp
 Cell.h
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/Cell.h
+tuple
+-
 
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/Cell.h
 include/SDL2/SDL.h
@@ -23,11 +25,19 @@ MazeGenerator.h
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeGenerator.h
 iostream
 -
+vector
+-
+stdlib.h
+-
+time.h
+-
 
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeGenerator.h
 Cell.h
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/Cell.h
 array
+-
+stack
 -
 
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/include/SDL2/SDL.h
