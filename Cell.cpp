@@ -3,7 +3,6 @@
 //
 
 #include "Cell.h"
-#include <tuple>
 
 Cell::Cell(){
     this->walls["right"] = true;
@@ -15,6 +14,7 @@ Cell::Cell(){
 
 void Cell::drawCell(SDL_Color color) {
     // Set render color to blue ( rect will be rendered in this color )
+
     SDL_SetRenderDrawColor(this->renderer, color.r ,color.g, color.b, color.a);
 
     if(this->walls["right"]){

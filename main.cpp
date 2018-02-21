@@ -3,8 +3,8 @@
 #include "include/SDL2/SDL.h"
 #include "MazeGenerator.h"
 
-#define WIN_HEIGHT 600
-#define WIN_WIDTH 600
+#define WIN_HEIGHT 800
+#define WIN_WIDTH 800
 
 using namespace std;
 
@@ -30,9 +30,9 @@ int main (int argc, char** argv)
     // Clear winow
     SDL_RenderClear( renderer );
 
-    // Gen Maze + Draw
-    MazeGenerator* generator = new MazeGenerator(200, WIN_WIDTH, WIN_HEIGHT, renderer);
+    MazeGenerator* generator = new MazeGenerator(100, WIN_WIDTH, WIN_HEIGHT, renderer);
     generator->GenerateMaze();
+    generator->pickRandomStartEnd();
 
     //gameLoop
     SDL_Event e;

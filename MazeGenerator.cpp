@@ -8,6 +8,7 @@
 #include <time.h>
 
 MazeGenerator::MazeGenerator(int matrixSize, int windowWidth, int windowHeight, SDL_Renderer* renderer) {
+    srand (time(NULL));
     //alloc 2D Array
     this->matrix = new Cell*[matrixSize];
     for(int i = 0; i < matrixSize; ++i) {
@@ -70,7 +71,6 @@ Cell* MazeGenerator::getCellNeighbour(){
     std::tie(x, y) = this->currentCell->getIndex();
     vector<Cell*> neighbours;
 
-    //srand (time(NULL));
     int neighbourCount = 0;
 
     //Top Neighbour
@@ -131,4 +131,30 @@ void MazeGenerator::removeWalls(Cell* a, Cell* b) {
         a->walls["bottom"] = false;
         b->walls["top"] = false;
     }
+}
+
+void MazeGenerator::pickRandomStartEnd(){
+    //chooses random startpoint inside first quadrant
+    this->start = &this->matrix[rand() % this->MatrixSize/2][rand() % this->MatrixSize/2];
+    //chooses random endpoint inside fourth quadrant
+    this->end = &this->matrix[rand() % this->MatrixSize/2 + this->MatrixSize/2][rand() % this->MatrixSize/2 + this->MatrixSize/2];
+    this->highlightCell({0,255,0,0},this->start);
+    this->highlightCell({255,0,0,0},this->end);
+}
+
+void MazeGenerator::highlightCell(SDL_Color clr, Cell* cell){
+    SDL_Rect r;
+    r.x = cell->x;
+    r.y = cell->y;
+    r.w = cell->scale;
+    r.h = cell->scale;
+
+    // Set render color to blue ( rect will be rendered in this color )
+    SDL_SetRenderDrawColor( renderer, clr.r, clr.g, clr.b, clr.a);
+
+    // Render rect
+    SDL_RenderFillRect( renderer, &r );
+
+    // Render the rect to the screen
+    SDL_RenderPresent(renderer);
 }
