@@ -10,6 +10,10 @@ Cell::Cell(){
     this->walls["top"] = true;
     this->walls["bottom"] = true;
     this->visited = false;
+    this->f = 0;
+    this->h = 0;
+    this->g = 0;
+    this->cameFrom = nullptr;
 }
 
 void Cell::drawCell(SDL_Color color) {
@@ -69,4 +73,25 @@ int Cell::getY(){
 
 int Cell::getScale(){
     return this->scale;
+}
+
+map<string,bool> Cell::getWalls(){
+    return this->walls;
+}
+
+void Cell::highlight(SDL_Color clr){
+    SDL_Rect r;
+    r.x = this->getX();
+    r.y = this->getY();
+    r.w = this->getScale();
+    r.h = this->getScale();
+
+    // Set render color
+    SDL_SetRenderDrawColor( this->renderer, clr.r, clr.g, clr.b, clr.a);
+
+    // Render rect
+    SDL_RenderFillRect( this->renderer, &r );
+
+    // Render the rect to the screen
+    SDL_RenderPresent(this->renderer);
 }

@@ -38,6 +38,24 @@ array
 stack
 -
 
+C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.cpp
+MazeSolver.h
+C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.h
+algorithm
+-
+stdlib.h
+-
+math.h
+-
+
+C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.h
+vector
+-
+Cell.h
+C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/Cell.h
+MazeGenerator.h
+C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeGenerator.h
+
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/include/SDL2/SDL.h
 SDL_main.h
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/include/SDL2/SDL_main.h
@@ -589,4 +607,6 @@ include/SDL2/SDL.h
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/include/SDL2/SDL.h
 MazeGenerator.h
 C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeGenerator.h
+MazeSolver.h
+C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.h
 

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/Cell.cpp" "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/cmake-build-debug/CMakeFiles/MazeSolver.dir/Cell.cpp.obj"
   "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeGenerator.cpp" "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/cmake-build-debug/CMakeFiles/MazeSolver.dir/MazeGenerator.cpp.obj"
+  "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.cpp" "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/cmake-build-debug/CMakeFiles/MazeSolver.dir/MazeSolver.cpp.obj"
   "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/main.cpp" "C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/cmake-build-debug/CMakeFiles/MazeSolver.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

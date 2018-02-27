@@ -176,6 +176,33 @@ MazeGenerator.cpp.s:
 	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/MazeGenerator.cpp.s
 .PHONY : MazeGenerator.cpp.s
 
+MazeSolver.obj: MazeSolver.cpp.obj
+
+.PHONY : MazeSolver.obj
+
+# target to build an object file
+MazeSolver.cpp.obj:
+	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/MazeSolver.cpp.obj
+.PHONY : MazeSolver.cpp.obj
+
+MazeSolver.i: MazeSolver.cpp.i
+
+.PHONY : MazeSolver.i
+
+# target to preprocess a source file
+MazeSolver.cpp.i:
+	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/MazeSolver.cpp.i
+.PHONY : MazeSolver.cpp.i
+
+MazeSolver.s: MazeSolver.cpp.s
+
+.PHONY : MazeSolver.s
+
+# target to generate assembly for a file
+MazeSolver.cpp.s:
+	$(MAKE) -f CMakeFiles\MazeSolver.dir\build.make CMakeFiles/MazeSolver.dir/MazeSolver.cpp.s
+.PHONY : MazeSolver.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -218,6 +245,9 @@ help:
 	@echo ... MazeGenerator.obj
 	@echo ... MazeGenerator.i
 	@echo ... MazeGenerator.s
+	@echo ... MazeSolver.obj
+	@echo ... MazeSolver.i
+	@echo ... MazeSolver.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

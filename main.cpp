@@ -2,9 +2,10 @@
 
 #include "include/SDL2/SDL.h"
 #include "MazeGenerator.h"
+#include "MazeSolver.h"
 
-#define WIN_HEIGHT 1000
-#define WIN_WIDTH 1000
+#define WIN_HEIGHT 900
+#define WIN_WIDTH 900
 
 using namespace std;
 
@@ -30,9 +31,15 @@ int main (int argc, char** argv)
     // Clear winow
     SDL_RenderClear( renderer );
 
-    MazeGenerator* generator = new MazeGenerator(100, WIN_WIDTH, WIN_HEIGHT, renderer);
+    MazeGenerator* generator = new MazeGenerator(75, WIN_WIDTH, WIN_HEIGHT, renderer);
     generator->GenerateMaze();
     generator->pickRandomStartEnd();
+
+    MazeSolver* solver = new MazeSolver(generator,renderer);
+    while(!solver->astar_solve()){
+        generator->DrawMaze({255,255,255,0});
+        generator->pickRandomStartEnd();
+    }
 
     //gameLoop
     SDL_Event e;

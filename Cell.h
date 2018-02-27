@@ -20,6 +20,10 @@ class Cell{
         bool visited;
         SDL_Renderer* renderer;
     public:
+        int f;
+        int h;
+        int g;
+        Cell* cameFrom;
         Cell();
         void drawCell(SDL_Color color);
         tuple<int, int> getIndex();
@@ -30,6 +34,8 @@ class Cell{
         void setCell(int x, int y, int scale, SDL_Renderer* renderer);
         void setWalls(string wall, bool value);
         void setVisited(bool visited);
+        map<string,bool> getWalls();
+        void highlight(SDL_Color clr);
 };
 
 #endif //SDL_DEMO_RECT_H

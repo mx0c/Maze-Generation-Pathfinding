@@ -14,15 +14,13 @@ MazeGenerator::MazeGenerator(int matrixSize, int windowWidth, int windowHeight, 
     for(int i = 0; i < matrixSize; ++i) {
         this->matrix[i] = new Cell[matrixSize];
     }
-
+    this->scale = windowWidth/matrixSize;
     //init 2D Array
     for(int x = 0; x < matrixSize; x++) {
         for (int y = 0; y < matrixSize; y++) {
-            int wScale = windowWidth/matrixSize;
-            int hScale = windowHeight/matrixSize;
-            int xPos = x*wScale;
-            int yPos = y*hScale;
-            this->matrix[x][y].setCell(xPos, yPos, hScale, renderer);
+            int xPos = x*this->scale;
+            int yPos = y*this->scale;
+            this->matrix[x][y].setCell(xPos, yPos, scale, renderer);
         }
     }
 
@@ -134,27 +132,30 @@ void MazeGenerator::removeWalls(Cell* a, Cell* b) {
 }
 
 void MazeGenerator::pickRandomStartEnd(){
-    //chooses random startpoint inside first quadrant
+    //chooses random startpoint inside second quadrant
     this->start = &this->matrix[rand() % this->MatrixSize/2][rand() % this->MatrixSize/2];
     //chooses random endpoint inside fourth quadrant
     this->end = &this->matrix[rand() % this->MatrixSize/2 + this->MatrixSize/2][rand() % this->MatrixSize/2 + this->MatrixSize/2];
-    this->highlightCell({0,255,0,0},this->start);
-    this->highlightCell({255,0,0,0},this->end);
+    this->start->highlight({0,255,0,0});
+    this->end->highlight({255,0,0,0});
 }
 
-void MazeGenerator::highlightCell(SDL_Color clr, Cell* cell){
-    SDL_Rect r;
-    r.x = cell->getX();
-    r.y = cell->getY();
-    r.w = cell->getScale();
-    r.h = cell->getScale();
+Cell** MazeGenerator::getMatrix(){
+    return this->matrix;
+}
 
-    // Set render color
-    SDL_SetRenderDrawColor( renderer, clr.r, clr.g, clr.b, clr.a);
+int MazeGenerator::getSize(){
+    return this->MatrixSize;
+}
 
-    // Render rect
-    SDL_RenderFillRect( renderer, &r );
+Cell* MazeGenerator::getStart(){
+    return this->start;
+}
 
-    // Render the rect to the screen
-    SDL_RenderPresent(renderer);
+Cell* MazeGenerator::getEnd(){
+    return this->end;
+}
+
+int MazeGenerator::getScale(){
+    return this->scale;
 }

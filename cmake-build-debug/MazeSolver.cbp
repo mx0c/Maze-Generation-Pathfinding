@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeGenerator.h">
 			<Option target="MazeSolver"/>
 		</Unit>
+		<Unit filename="C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.cpp">
+			<Option target="MazeSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/MazeSolver.h">
+			<Option target="MazeSolver"/>
+		</Unit>
 		<Unit filename="C:/Users/Marius/Desktop/Maze-Generation-Pathfinding/main.cpp">
 			<Option target="MazeSolver"/>
 		</Unit>

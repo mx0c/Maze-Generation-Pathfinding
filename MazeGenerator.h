@@ -18,13 +18,18 @@ class MazeGenerator{
         int MatrixSize;
         stack<Cell*> CellStack;
         SDL_Renderer* renderer;
+        int scale;
     public:
         MazeGenerator(int matrixSize, int windowWidth, int windowHeight, SDL_Renderer* renderer);
         void GenerateMaze();
         void DrawMaze(SDL_Color color);
         void removeWalls(Cell* current, Cell* next);
         void pickRandomStartEnd();
-        void highlightCell(SDL_Color c, Cell* cell);
         Cell* getCellNeighbour();
+        Cell** getMatrix();
+        int getSize();
+        Cell* getStart();
+        Cell* getEnd();
+        int getScale();
 };
 #endif //MAZESOLVER_MAZEGENERATOR_H
