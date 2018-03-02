@@ -25,6 +25,7 @@ public:
     vector<Cell*> getNeighbours(Cell* current);
     int heuristic(Cell* start, Cell* end);
     Cell* getCell(int x, int y);
+    bool debug;
 };
 
 #endif //MAZESOLVER_MAZESOLVER_H

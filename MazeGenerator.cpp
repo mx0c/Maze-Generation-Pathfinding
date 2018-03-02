@@ -52,11 +52,6 @@ void MazeGenerator::GenerateMaze(){
 }
 
 void MazeGenerator::DrawMaze(SDL_Color color){
-    // Set render color to red ( background will be rendered in this color )
-    SDL_SetRenderDrawColor(this->renderer, 0, 0, 0, 0);
-    // Clear winow
-    SDL_RenderClear(this->renderer);
-
     for(int x = 0; x < this->MatrixSize; x++) {
         for (int y = 0; y < this->MatrixSize; y++) {
             this->matrix[x][y].drawCell(color);
@@ -136,8 +131,8 @@ void MazeGenerator::pickRandomStartEnd(){
     this->start = &this->matrix[rand() % this->MatrixSize/2][rand() % this->MatrixSize/2];
     //chooses random endpoint inside fourth quadrant
     this->end = &this->matrix[rand() % this->MatrixSize/2 + this->MatrixSize/2][rand() % this->MatrixSize/2 + this->MatrixSize/2];
-    this->start->highlight({0,255,0,0});
-    this->end->highlight({255,0,0,0});
+    this->start->highlight({255,255,255,255});
+    this->end->highlight({255,255,255,255});
 }
 
 Cell** MazeGenerator::getMatrix(){

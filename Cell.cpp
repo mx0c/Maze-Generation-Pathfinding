@@ -14,6 +14,7 @@ Cell::Cell(){
     this->h = 0;
     this->g = 0;
     this->cameFrom = nullptr;
+    this->highlighted = false;
 }
 
 void Cell::drawCell(SDL_Color color) {
@@ -94,4 +95,7 @@ void Cell::highlight(SDL_Color clr){
 
     // Render the rect to the screen
     SDL_RenderPresent(this->renderer);
+
+    //redraw Cell
+    this->drawCell({255,255,255,255});
 }

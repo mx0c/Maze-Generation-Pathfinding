@@ -24,6 +24,7 @@ class Cell{
         int h;
         int g;
         Cell* cameFrom;
+        bool highlighted;
         Cell();
         void drawCell(SDL_Color color);
         tuple<int, int> getIndex();

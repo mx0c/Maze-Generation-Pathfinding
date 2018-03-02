@@ -31,15 +31,16 @@ int main (int argc, char** argv)
     // Clear winow
     SDL_RenderClear( renderer );
 
-    MazeGenerator* generator = new MazeGenerator(75, WIN_WIDTH, WIN_HEIGHT, renderer);
+    MazeGenerator* generator = new MazeGenerator(50, WIN_WIDTH, WIN_HEIGHT, renderer);
     generator->GenerateMaze();
     generator->pickRandomStartEnd();
 
     MazeSolver* solver = new MazeSolver(generator,renderer);
-    while(!solver->astar_solve()){
-        generator->DrawMaze({255,255,255,0});
-        generator->pickRandomStartEnd();
-    }
+    solver->debug = false;
+    solver->astar_solve();
+
+    generator->getStart()->highlight({255,255,255,255});
+    generator->getEnd()->highlight({255,255,255,255});
 
     //gameLoop
     SDL_Event e;

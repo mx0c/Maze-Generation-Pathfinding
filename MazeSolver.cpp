@@ -14,6 +14,7 @@ MazeSolver::MazeSolver(MazeGenerator* mgen, SDL_Renderer* r){
     this->end = mgen->getEnd();
     this->matrix = mgen->getMatrix();
     this->matrixSize = mgen->getSize();
+    this->debug = false;
 }
 
 bool MazeSolver::astar_solve(){
@@ -22,12 +23,17 @@ bool MazeSolver::astar_solve(){
     openSet.push_back(this->start);
 
     while(openSet.size() > 0){
-        /*for(auto cell : closedSet){
-            cell->highlight({100,0,0,0});
+        if(this->debug) {
+            for (auto cell : closedSet) {
+                if (!cell->highlighted) {
+                    cell->highlighted = true;
+                    cell->highlight({100, 0, 0, 0});
+                }
+            }
+            for (auto cell : openSet) {
+                cell->highlight({0, 100, 0, 0});
+            }
         }
-        for(auto cell : openSet){
-            cell->highlight({0,100,0,0});
-        }*/
 
         Cell* current = openSet.at(0);
         //get cell with lowest f in openSet
