@@ -154,3 +154,11 @@ Cell* MazeGenerator::getEnd(){
 int MazeGenerator::getScale(){
     return this->scale;
 }
+
+void MazeGenerator::destroy(){
+    for(int x = 0;x < this->MatrixSize;x++) {
+        for (int y = 0; y < this->MatrixSize; y++) {
+            delete this->matrix[x][y];
+        }
+    }
+}

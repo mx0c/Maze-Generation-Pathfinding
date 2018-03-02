@@ -49,6 +49,8 @@ int main (int argc, char** argv)
         if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_ESCAPE || e.type == SDL_QUIT) break;
     }
 
+    generator->destroy();
+
     SDL_DestroyWindow(window);
     SDL_Quit();
 

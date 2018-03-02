@@ -31,5 +31,6 @@ class MazeGenerator{
         Cell* getStart();
         Cell* getEnd();
         int getScale();
+        void destroy();
 };
 #endif //MAZESOLVER_MAZEGENERATOR_H
