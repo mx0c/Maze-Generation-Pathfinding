@@ -18,6 +18,8 @@ private:
     std::vector<Cell*> path;
     int scale;
     int matrixSize;
+    bool dragStart;
+    bool dragEnd;
 public:
     MazeSolver(MazeGenerator* mgen, SDL_Renderer* r);
     bool astar_solve();
@@ -25,6 +27,8 @@ public:
     vector<Cell*> getNeighbours(Cell* current);
     int heuristic(Cell* start, Cell* end);
     Cell* getCell(int x, int y);
+    void dragndrop(SDL_Event e);
+    void clearPath();
     bool debug;
 };
 

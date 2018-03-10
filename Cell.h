@@ -31,6 +31,8 @@ class Cell{
         bool getVisited();
         int getX();
         int getY();
+        void setX(int x);
+        void setY(int y);
         int getScale();
         void setCell(int x, int y, int scale, SDL_Renderer* renderer);
         void setWalls(string wall, bool value);

@@ -23,6 +23,7 @@ class MazeGenerator{
         MazeGenerator(int matrixSize, int windowWidth, int windowHeight, SDL_Renderer* renderer);
         void GenerateMaze();
         void DrawMaze(SDL_Color color);
+        void renderMazeToScreen();
         void removeWalls(Cell* current, Cell* next);
         void pickRandomStartEnd();
         Cell* getCellNeighbour();

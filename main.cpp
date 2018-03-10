@@ -31,7 +31,7 @@ int main (int argc, char** argv)
     // Clear winow
     SDL_RenderClear( renderer );
 
-    MazeGenerator* generator = new MazeGenerator(50, WIN_WIDTH, WIN_HEIGHT, renderer);
+    MazeGenerator* generator = new MazeGenerator(75, WIN_WIDTH, WIN_HEIGHT, renderer);
     generator->GenerateMaze();
     generator->pickRandomStartEnd();
 
@@ -39,16 +39,15 @@ int main (int argc, char** argv)
     solver->debug = false;
     solver->astar_solve();
 
-    generator->getStart()->highlight({255,255,255,255});
-    generator->getEnd()->highlight({255,255,255,255});
-
     //gameLoop
     SDL_Event e;
     while( SDL_WaitEvent(&e) )
     {
         if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_ESCAPE || e.type == SDL_QUIT) break;
+        solver->dragndrop(e);
     }
 
+    //Garbage Collect Cellgrid
     generator->destroy();
 
     SDL_DestroyWindow(window);

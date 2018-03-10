@@ -23,9 +23,8 @@ MazeGenerator::MazeGenerator(int matrixSize, int windowWidth, int windowHeight, 
             this->matrix[x][y].setCell(xPos, yPos, scale, renderer);
         }
     }
-
-    this->renderer = renderer;
     this->MatrixSize = matrixSize;
+    this->renderer = renderer;
 }
 
 void MazeGenerator::GenerateMaze(){
@@ -131,8 +130,8 @@ void MazeGenerator::pickRandomStartEnd(){
     this->start = &this->matrix[rand() % this->MatrixSize/2][rand() % this->MatrixSize/2];
     //chooses random endpoint inside fourth quadrant
     this->end = &this->matrix[rand() % this->MatrixSize/2 + this->MatrixSize/2][rand() % this->MatrixSize/2 + this->MatrixSize/2];
-    this->start->highlight({255,255,255,255});
-    this->end->highlight({255,255,255,255});
+    this->start->highlight({255,0,0,255});
+    this->end->highlight({255,0,0,255});
 }
 
 Cell** MazeGenerator::getMatrix(){

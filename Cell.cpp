@@ -18,8 +18,7 @@ Cell::Cell(){
 }
 
 void Cell::drawCell(SDL_Color color) {
-    // Set render color to blue ( rect will be rendered in this color )
-
+    // Set render color
     SDL_SetRenderDrawColor(this->renderer, color.r ,color.g, color.b, color.a);
 
     if(this->walls["right"]){
@@ -98,4 +97,12 @@ void Cell::highlight(SDL_Color clr){
 
     //redraw Cell
     this->drawCell({255,255,255,255});
+}
+
+void Cell::setX(int x){
+    this->x = x;
+}
+
+void Cell::setY(int y){
+    this->y = y;
 }

@@ -15,12 +15,25 @@ MazeSolver::MazeSolver(MazeGenerator* mgen, SDL_Renderer* r){
     this->matrix = mgen->getMatrix();
     this->matrixSize = mgen->getSize();
     this->debug = false;
+    this->dragStart = false;
+    this->dragEnd = false;
 }
 
 bool MazeSolver::astar_solve(){
     vector<Cell*> closedSet;
     vector<Cell*> openSet;
     openSet.push_back(this->start);
+
+    //reset matrix
+    for(int x=0; x < matrixSize;x++){
+        for(int y=0; y < matrixSize;y++) {
+            this->matrix[x][y].h = 0;
+            this->matrix[x][y].f = 0;
+            this->matrix[x][y].g = 0;
+            this->matrix[x][y].setVisited(false);
+            this->matrix[x][y].cameFrom = nullptr;
+        }
+    }
 
     while(openSet.size() > 0){
         if(this->debug) {
@@ -50,7 +63,7 @@ bool MazeSolver::astar_solve(){
                 this->path.push_back(current->cameFrom);
                 current = current->cameFrom;
             }
-            this->drawPath({0,0,255,0});
+            this->drawPath({255,0,0,0});
             return true;
         }
         //remove current from openSet
@@ -79,7 +92,6 @@ bool MazeSolver::astar_solve(){
             neighbour->cameFrom = current;
         }
     }
-    printf("no path found");
     return false;
 }
 
@@ -112,6 +124,10 @@ int MazeSolver::heuristic(Cell* start, Cell* end){
 }
 
 void MazeSolver::drawPath(SDL_Color color) {
+    if(this->path.size() <= 0){
+        return;
+    }
+
     SDL_SetRenderDrawColor(this->renderer, color.r, color.g, color.b, color.a);
     for (size_t i = 0; i < this->path.size() - 1; i++) {
         SDL_RenderDrawLine(this->renderer,
@@ -128,3 +144,59 @@ Cell* MazeSolver::getCell(int x, int y){
     return &this->matrix[x][y];
 }
 
+void MazeSolver::dragndrop(SDL_Event e){
+    int x,y;
+    SDL_GetMouseState(&x,&y);
+
+    if(this->dragStart){
+        x = x / scale * scale;
+        y = y / scale * scale;
+        Cell* oldStart = start;
+        this->start = &this->matrix[x / scale][y / scale];
+        if(this->start != oldStart){
+            oldStart->highlight({0,0,0,255});
+            this->clearPath();
+            this->astar_solve();
+            this->drawPath({255, 0, 0, 255});
+        }
+    }
+
+    if(this->dragEnd) {
+        x = x / scale * scale;
+        y = y / scale * scale;
+        Cell* oldEnd = end;
+        this->end = &this->matrix[x / scale][y / scale];
+        if (this->end != oldEnd) {
+            oldEnd->highlight({0, 0, 0, 255});
+            this->clearPath();
+            this->astar_solve();
+            this->drawPath({255, 0, 0, 255});
+        }
+    }
+
+    //highlight start and end point
+    this->end->highlight({255,0,0,255});
+    this->start->highlight({255,0,0,255});
+
+    if(e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
+        if(this->dragStart){
+            this->dragStart = false;
+        }
+        if(this->dragEnd){
+            this->dragEnd = false;
+        }
+        //check if endpoint is clicked
+        if(x > this->end->getX() && x < this->end->getX() + this->scale && y > this->end->getY() && y < this->end->getY() + this->scale){
+            this->dragEnd = true;
+        }
+        //check if startpoint is clicked
+        if(x > this->start->getX() && x < this->start->getX() + this->scale && y > this->start->getY() && y < this->start->getY() + this->scale){
+            this->dragStart = true;
+        }
+    }
+}
+
+void MazeSolver::clearPath(){
+    drawPath({0,0,0,255});
+    this->path.clear();
+}
